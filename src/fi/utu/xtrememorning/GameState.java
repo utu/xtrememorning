@@ -6,9 +6,13 @@ public class GameState {
 	ArrayList<Door> doors = new ArrayList<Door>();
 	ArrayList<Room> rooms = new ArrayList<Room>();
 	ArrayList<Player> players = new ArrayList<Player>();
+	GameData data = null;
 	
-	public GameState(GameData data) {
-		
+	/**
+	 * Wrapper class for game database objects.
+	 */
+	public GameState() {
+		this.data = new GameData();
 	}
 	
 	/**
@@ -31,6 +35,8 @@ public class GameState {
 		return players;
 	}
 	
-	
+	public void close() {
+		data.close();
+	}
 	
 }
