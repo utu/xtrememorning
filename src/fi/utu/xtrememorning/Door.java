@@ -1,14 +1,26 @@
 package fi.utu.xtrememorning;
 
-public class Door {
+public class Door extends GameObject {
 	String color;
-	Room behind;
+	Room room1;
+	Room room2;
 	
-	Door(Room room) {
-		this.behind = room;
+	@SuppressWarnings("unused")
+	private Door() {
+		// Don't you dare to initialize this
+	}
+	
+	public Door(Room room1, Room room2) {
+		this.room1 = room1;
+		this.room2 = room2;
 	}
 	
 	public boolean isExit() {
-		return this.behind.isExit();
+		if (room1 != null && room1.isExit)
+			return true;
+		if (room2 != null && room2.isExit)
+			return true;
+		
+		return false;
 	}
 }

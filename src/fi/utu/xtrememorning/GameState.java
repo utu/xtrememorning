@@ -3,7 +3,6 @@ package fi.utu.xtrememorning;
 import java.util.ArrayList;
 
 public class GameState {
-	ArrayList<Door> doors = new ArrayList<Door>();
 	ArrayList<Room> rooms = new ArrayList<Room>();
 	ArrayList<Player> players = new ArrayList<Player>();
 	GameData data = null;
@@ -21,7 +20,7 @@ public class GameState {
 	 * @return
 	 */
 	public ArrayList<Door> getDoors(Room room) {
-		return doors;
+		return room.doors;
 	}
 	
 	/**

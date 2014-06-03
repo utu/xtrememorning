@@ -34,7 +34,7 @@ public class GameData {
 		}
 	}
 	
-	public void test() throws SQLException {
+	public void example() throws SQLException {
 		String kys = "SELECT Ano, Animi FROM Asiakas " + "WHERE Paikka = 'Salo';";
 		Statement stmt = conn.createStatement();
 		ResultSet res = stmt.executeQuery(kys);
@@ -45,5 +45,48 @@ public class GameData {
 		}
 		res.close();
 		conn.close();
+	}
+	
+	public Room createRoom() {
+		// TODO
+		return null;
+	}
+	
+	public Door createDoor(Room room1, Room room2) {
+		// if either of the attributes is unset, crash with nullexception
+		if (room1 == null || room1.huoneId < 0)
+			room1.huoneId += 1;
+		if (room2 == null || room2.huoneId < 0)
+			room2.huoneId += 1;
+		
+		// TODO
+		return null;
+	}
+	
+	public Trap createTrap(Room room) {
+		// TODO
+		return null;
+	}
+	
+	public Trap createTrap(Door door) {
+		// TODO
+		return null;
+	}
+	
+	public Player createPlayer() {
+		// TODO
+		return null;
+	}
+	
+	public <T> void populate(T obj) throws SQLException {
+		if (obj instanceof Room) {
+			// TODO
+		} else if (obj instanceof Door) {
+			// TODO
+		} else if (obj instanceof Trap) {
+			// TODO
+		} else {
+			new SQLException("I don't know how to populate " + obj.getClass().getName());
+		}
 	}
 }
