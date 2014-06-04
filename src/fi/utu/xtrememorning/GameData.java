@@ -16,7 +16,7 @@ public class GameData {
 		try {
 			Class.forName("org.mysql.Driver");
 		} catch (ClassNotFoundException e) {
-			System.out.println("Ajuria ei löydy!");
+			System.out.println("Driver not found!");
 		}
 
 		try {
@@ -54,10 +54,10 @@ public class GameData {
 	
 	public Door createDoor(Room room1, Room room2) {
 		// if either of the attributes is unset, crash with nullexception
-		if (room1 == null || room1.huoneId < 0)
-			room1.huoneId += 1;
-		if (room2 == null || room2.huoneId < 0)
-			room2.huoneId += 1;
+		if (room1 == null || room1.ID < 0)
+			room1.ID += 1;
+		if (room2 == null || room2.ID < 0)
+			room2.ID += 1;
 		
 		// TODO
 		return null;

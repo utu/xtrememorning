@@ -7,7 +7,7 @@ public class Door extends GameObject {
 	
 	@SuppressWarnings("unused")
 	private Door() {
-		// Don't you dare to initialize this
+		// Don't you dare initialize this
 	}
 	
 	public Door(Room room1, Room room2) {
@@ -23,4 +23,7 @@ public class Door extends GameObject {
 		
 		return false;
 	}
+	
+	public Room getRoom1() {return room1;}
+	public Room getRoom2() {return room2;}
 }

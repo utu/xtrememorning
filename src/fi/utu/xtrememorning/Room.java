@@ -3,7 +3,7 @@ package fi.utu.xtrememorning;
 import java.util.ArrayList;
 
 public class Room extends GameObject {
-	int huoneId;
+	int ID;
 	ArrayList<Door> doors = new ArrayList<Door>();
 	ArrayList<Trap> traps = new ArrayList<Trap>();
 	boolean isExit = false;
@@ -13,8 +13,8 @@ public class Room extends GameObject {
 		// Nope
 	}
 
-	public Room(int id) {
-		this.huoneId = id;
+	public Room(int ID) {
+		this.ID = ID;
 	}
 	
 	public ArrayList<Door> getDoors() {

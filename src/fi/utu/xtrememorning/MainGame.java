@@ -8,7 +8,7 @@ public class MainGame
 		Cleaner cleaner = new Cleaner(state);
 		Runtime.getRuntime().addShutdownHook(cleaner);
 		
-		View view = new TextView();
+		View view = new TextView(state);
 		view.RenderState();
 	}
 }

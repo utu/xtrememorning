@@ -6,6 +6,12 @@ package fi.utu.xtrememorning;
  */
 public class TextView implements View
 {
+	private GameState state;
+	
+	public TextView(GameState state) {
+		this.state = state;
+	}
+	
 	public void RenderState() {
 		System.out.println("Rendering GameState, hang on!");
 	}
