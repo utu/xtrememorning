@@ -1,6 +1,6 @@
 package fi.utu.xtrememorning;
 
-public class Player extends GameObject {
+public class Player {
 
 	private String name;
 	private Room room;

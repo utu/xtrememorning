@@ -15,7 +15,8 @@ public class MainGame
 
 /**
  * Special shutdown hook thread, that gets initialized with the JVM, but runs only during
- * JVM shutdown. Cleans the runtime state.
+ * JVM shutdown. Cleans the runtime state and saves stuff, if needed. Hooks are called in random order,
+ * so there is a possibility, that database connection has already been shut down.
  * @author sjtoik
  *
  */

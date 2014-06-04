@@ -1,6 +1,6 @@
 package fi.utu.xtrememorning;
 
-public class Door extends GameObject {
+public class Door {
 	String color;
 	Room room1;
 	Room room2;

@@ -2,7 +2,7 @@ package fi.utu.xtrememorning;
 
 import java.util.ArrayList;
 
-public class Room extends GameObject {
+public class Room {
 	int ID;
 	ArrayList<Door> doors = new ArrayList<Door>();
 	ArrayList<Trap> traps = new ArrayList<Trap>();
