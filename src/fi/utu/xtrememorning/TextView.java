@@ -8,11 +8,16 @@ public class TextView implements View
 {
 	private GameState state;
 	
+	private void Render(String text) {
+		System.out.println(text);
+	}
+	
 	public TextView(GameState state) {
 		this.state = state;
 	}
 	
 	public void RenderState() {
-		System.out.println("Rendering GameState, hang on!");
+		Player plr = state.getPlayers().get(0);
+		Render("You are currently in " + plr.getRoom().description);
 	}
 }
