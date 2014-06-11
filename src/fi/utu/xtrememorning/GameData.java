@@ -29,6 +29,8 @@ public class GameData {
 	public void close() {
 		try {
 			this.conn.close();
+		} catch (NullPointerException e) {
+			// pass
 		} catch (SQLException e) {
 			// pass
 		}
@@ -64,11 +66,6 @@ public class GameData {
 	}
 	
 	public Trap createTrap(Room room) {
-		// TODO
-		return null;
-	}
-	
-	public Trap createTrap(Door door) {
 		// TODO
 		return null;
 	}
