@@ -15,6 +15,7 @@ public class Room {
 
 	public Room(int ID) {
 		this.ID = ID;
+		// TODO read data from database
 	}
 	
 	public ArrayList<Door> getDoors() {
