@@ -1,6 +1,5 @@
 package fi.utu.xtrememorning;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class GameState {
@@ -39,7 +38,7 @@ public class GameState {
 		return actions;
 	}
 	
-	public void populate(ActionyThingy obj) throws SQLException {
+	public void execute(ActionyThingy obj) throws SuperpositionalQuantumException {
 		
 	}
 
