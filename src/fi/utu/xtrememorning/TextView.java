@@ -31,10 +31,14 @@ public class TextView implements View
 		}
 		else {
 			Render("You are currently in " + room.description);
-			Render("The room contains the following items:");
-			ArrayList<Item> items = room.items;
-			for (int i = 0; i < items.size(); ++i) {
-				Render(" - " + items.get(i).description);
+			Render("\nThe room contains the following items:");
+			for (Item item: room.items) {
+				Render(" - " + item.description);
+			}
+			Render("\nYou have the following actions:");
+			ArrayList<String> actions = state.getActions(room);
+			for (int i = 0; i < actions.size(); ++i) {
+				Render((new Integer(i)).toString() + ") " + actions.get(i));
 			}
 		}
 	}
