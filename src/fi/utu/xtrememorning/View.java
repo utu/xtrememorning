@@ -6,5 +6,5 @@ package fi.utu.xtrememorning;
  */
 public interface View
 {
-	void RenderState();
+	void RenderState() throws ExceptionalException;
 }

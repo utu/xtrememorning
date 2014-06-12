@@ -2,8 +2,13 @@ package fi.utu.xtrememorning;
 
 public class Player {
 
-	private String name;
-	private Room room;
+	public String name;
+	public String race;
+	public int hp;
+	public int maxHp;
+	public int exp;
+	public String speciality;
+	public Room room;
 	
 	@SuppressWarnings("unused")
 	private Player() {

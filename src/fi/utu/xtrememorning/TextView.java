@@ -18,7 +18,7 @@ public class TextView implements View
 		this.state = state;
 	}
 	
-	public void RenderState() {
+	public void RenderState() throws ExceptionalException {
 		ArrayList<Player> plrs = state.getPlayers();
 		if (plrs.size() == 0) {
 			Render("No player found!");
