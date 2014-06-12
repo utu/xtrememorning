@@ -1,18 +1,31 @@
 package fi.utu.xtrememorning;
 
+import java.util.Scanner;
+
 public class MainGame {
 	public static void main(String[] args) {
 		GameState state = new GameState();
 		Cleaner cleaner = new Cleaner(state);
 		Runtime.getRuntime().addShutdownHook(cleaner);
+		View view = new TextView(state);
+		Scanner textInput = new Scanner(System.in);
+		System.out.println("Welcome to Xtreme Morning v0.1");
+		System.out.println("Type 'q' or 'quit' to quit the game\n");
 
 		try {
-			View view = new TextView(state);
-			view.RenderState();
+			while (true) {
+				view.RenderState();
+				String input = textInput.next();
+				if (input.equals("q") || input.equals("quit")) {
+					throw new ExceptionalException("User quit.");
+				}
+			}
 		} catch (ExceptionalException e) {
+			textInput.close();
 			System.out.println("Game ended: " + e.getMessage());
 			System.exit(0);
 		}
+		textInput.close();
 	}
 }
 

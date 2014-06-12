@@ -30,7 +30,15 @@ public class TextView implements View
 			Render("You are currently in the void!");
 		}
 		else {
-			Render("You are currently in " + plr.getRoom().description);
+			Render("You are currently in " + room.description);
+			Render("The room contains the following items:");
+			ArrayList<Item> items = room.items;
+			for (int i = 0; i < items.size(); ++i) {
+				Render(" - " + items.get(i).description);
+			}
 		}
+	}
+	
+	public void ReceiveInput(String input) {
 	}
 }
