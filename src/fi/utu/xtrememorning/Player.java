@@ -15,11 +15,13 @@ public class Player implements ActionyThingy {
 		// Nope
 	}
 	
-	public Player(String name) {
+	public Player(String name, String race, int hp, int maxHp, int exp, String speciality, Room room) {
 		this.name = name;
+		this.race = race;
+		this.hp = hp;
+		this.maxHp = maxHp;
+		this.exp = exp;
+		this.speciality = speciality;
+		this.room = room;
 	}
-	
-	public String getName() {return name;}
-	public Room getRoom() {return room;}
-	public void setRoom(Room room) {this.room = room;}
 }

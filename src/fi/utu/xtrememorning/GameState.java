@@ -39,7 +39,6 @@ public class GameState {
 	}
 	
 	public void execute(ActionyThingy obj) throws SuperpositionalQuantumException {
-		
 		if (obj instanceof Door) {
 			// go trough
 		} else if (obj instanceof Item) {
