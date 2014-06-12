@@ -1,6 +1,6 @@
 package fi.utu.xtrememorning;
 
-public class Item {
+public class Item implements ActionyThingy {
 	public int ID;
 	public String description;
 	

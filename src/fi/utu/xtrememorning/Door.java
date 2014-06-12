@@ -1,6 +1,6 @@
 package fi.utu.xtrememorning;
 
-public class Door {
+public class Door implements ActionyThingy {
 	public String color;
 	private Room room1;
 	private Room room2;
