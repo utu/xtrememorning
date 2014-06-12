@@ -45,4 +45,9 @@ public class Character implements ActionyThingy {
 			super(name, race, hp, maxHp, exp, speciality, room);
 		}
 	}
+
+	@Override
+	public String getName() {
+		return name;
+	}
 }
