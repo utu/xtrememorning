@@ -19,6 +19,7 @@ public class MainGame {
 				if (input.equals("q") || input.equals("quit")) {
 					throw new ExceptionalException("User quit.");
 				}
+				view.ReceiveInput(input);
 			}
 		} catch (ExceptionalException e) {
 			textInput.close();

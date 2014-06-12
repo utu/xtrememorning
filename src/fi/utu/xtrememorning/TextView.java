@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class TextView implements View
 {
 	private GameState state;
+	private ArrayList<ActionyThingy> actions;
 	
 	private void Render(String text) {
 		System.out.println(text);
@@ -36,7 +37,7 @@ public class TextView implements View
 				Render(" - " + item.description);
 			}
 			Render("\nYou have the following actions:");
-			ArrayList<ActionyThingy> actions = state.getActions(room);
+			actions = state.getActions(room);
 			for (int i = 0; i < actions.size(); ++i) {
 				Render((new Integer(i)).toString() + ") " + actions.get(i).getName());
 			}
@@ -44,5 +45,17 @@ public class TextView implements View
 	}
 	
 	public void ReceiveInput(String input) {
+		if (actions == null) {
+			Render("No actions available!");
+			return;
+		}
+		int index = (int)Integer.getInteger(input);
+		Render("Action " + index + " selected.");
+		try {
+			state.execute(actions.get(index));
+		}
+		catch (SuperpositionalQuantumException spqe) {
+			// TODO
+		}
 	}
 }
