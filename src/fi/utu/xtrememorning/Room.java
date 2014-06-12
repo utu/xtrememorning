@@ -2,7 +2,7 @@ package fi.utu.xtrememorning;
 
 import java.util.ArrayList;
 
-public class Room implements ActionyThingy {
+public class Room {
 	public int ID = 0;
 	public ArrayList<Door> doors = new ArrayList<Door>();
 	public ArrayList<Item> items = new ArrayList<Item>();

@@ -6,4 +6,8 @@ public class SuperpositionalQuantumException extends Exception {
 	public SuperpositionalQuantumException(String msg) {
 		super(msg);
 	}
+	
+	public SuperpositionalQuantumException(ExceptionalException e) {
+		super(e);
+	}
 }

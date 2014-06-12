@@ -1,6 +1,6 @@
 package fi.utu.xtrememorning;
 
-public class Player {
+public class Player implements ActionyThingy {
 
 	public String name;
 	public String race;
