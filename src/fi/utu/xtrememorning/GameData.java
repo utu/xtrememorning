@@ -72,7 +72,7 @@ public class GameData {
 		return null;
 	}
 
-	public Player createPlayer() {
+	public Character createPlayer() {
 		// TODO
 		return null;
 	}

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class GameState {
 	ArrayList<Room> rooms = new ArrayList<Room>();
-	ArrayList<Player> players = new ArrayList<Player>();
+	ArrayList<Character> players = new ArrayList<Character>();
 	GameData data = null;
 
 	/**
@@ -22,7 +22,7 @@ public class GameState {
 		return rooms;
 	}
 
-	public ArrayList<Player> getPlayers() {
+	public ArrayList<Character> getPlayers() {
 		return players;
 	}
 
@@ -43,7 +43,7 @@ public class GameState {
 			// go trough
 		} else if (obj instanceof Item) {
 			// change ownership
-		} else if (obj instanceof Player) {
+		} else if (obj instanceof Character) {
 			// attack the player
 		}
 	}

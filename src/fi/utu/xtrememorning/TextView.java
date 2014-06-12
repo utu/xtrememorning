@@ -19,12 +19,12 @@ public class TextView implements View
 	}
 	
 	public void RenderState() throws ExceptionalException {
-		ArrayList<Player> plrs = state.getPlayers();
+		ArrayList<Character> plrs = state.getPlayers();
 		if (plrs.size() == 0) {
 			Render("No player found!");
 			return;
 		}
-		Player plr = plrs.get(0);
+		Character plr = plrs.get(0);
 		Room room = plr.room;
 		if (room == null) {
 			Render("You are currently in the void!");
