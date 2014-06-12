@@ -36,4 +36,8 @@ public class Door implements ActionyThingy {
 	public Room getRoom2() {
 		return room2;
 	}
+	
+	public String getName() {
+		return "Door";
+	}
 }

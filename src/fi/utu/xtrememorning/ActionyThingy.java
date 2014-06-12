@@ -6,4 +6,5 @@ package fi.utu.xtrememorning;
  *
  */
 public interface ActionyThingy {
+	public String getName();
 }

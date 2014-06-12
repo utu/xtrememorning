@@ -36,9 +36,9 @@ public class TextView implements View
 				Render(" - " + item.description);
 			}
 			Render("\nYou have the following actions:");
-			ArrayList<String> actions = state.getActions(room);
+			ArrayList<ActionyThingy> actions = state.getActions(room);
 			for (int i = 0; i < actions.size(); ++i) {
-				Render((new Integer(i)).toString() + ") " + actions.get(i));
+				Render((new Integer(i)).toString() + ") " + actions.get(i).getName());
 			}
 		}
 	}

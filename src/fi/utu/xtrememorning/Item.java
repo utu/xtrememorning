@@ -10,4 +10,8 @@ public class Item implements ActionyThingy {
 	public Item(int ID) {
 		this.ID = ID;
 	}
+	
+	public String getName() {
+		return "Item";
+	}
 }

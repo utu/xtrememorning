@@ -24,4 +24,8 @@ public class Player implements ActionyThingy {
 		this.speciality = speciality;
 		this.room = room;
 	}
+	
+	public String getName() {
+		return "Player";
+	}
 }
