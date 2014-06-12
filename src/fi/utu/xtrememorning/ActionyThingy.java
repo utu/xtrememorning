@@ -1,7 +1,7 @@
 package fi.utu.xtrememorning;
 
 /**
- * This interface marks a thingy, that has a realted action.
+ * This interface marks a thingy, that has a related action.
  * @author sjtoik
  *
  */

@@ -25,7 +25,7 @@ public class TextView implements View
 			return;
 		}
 		Player plr = plrs.get(0);
-		Room room = plr.getRoom();
+		Room room = plr.room;
 		if (room == null) {
 			Render("You are currently in the void!");
 		}

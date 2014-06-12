@@ -33,13 +33,19 @@ public class GameState {
 	 * @param room
 	 * @return
 	 */
-	public ArrayList<String> getActions(Room room) {
-		ArrayList<String> actions = new ArrayList<String>();
+	public ArrayList<ActionyThingy> getActions(Room room) {
+		ArrayList<ActionyThingy> actions = new ArrayList<ActionyThingy>();
 		return actions;
 	}
 	
 	public void execute(ActionyThingy obj) throws SuperpositionalQuantumException {
-		
+		if (obj instanceof Door) {
+			// go trough
+		} else if (obj instanceof Item) {
+			// change ownership
+		} else if (obj instanceof Player) {
+			// attack the player
+		}
 	}
 
 	public void close() {
